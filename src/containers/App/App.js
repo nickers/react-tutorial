@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Router } from 'react-router';
 
+import styles from './styles.module.css'
+
 class App extends React.Component {
   static propTypes = {
     routes: PropTypes.object.isRequired,
@@ -16,7 +18,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100%' }}>
+      <div className={styles.wrapper}>
         {this.content}
       </div>
     )
